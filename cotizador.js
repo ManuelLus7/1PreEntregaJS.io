@@ -1,11 +1,16 @@
 const tasaAnual= 2.20;
-  const trimestral= (tasaAnual/4);
+  const trimestral= tasaAnual / 4;
   const mantenimientoOferta = "Mantenimiento de Oferta";
   const ejecucionContrato = "Ejecución de Contrato";
   const anticipoFinanciero = "Anticipo Financiero";
   const fondoReparo = "Fondo de Reparo";
   const bienvenido = "Bienvenido!! "
-  const menu = " ¿Qué Seguro de Caución desea Cotizar? \n 1-Mantenimiento de Oferta\n 2-Ejecución de Contrato\n 3-Anticipo Financiero\n 4-Fondo de Reparo\n 5-Salir"
+  const menu = `¿Qué Seguro de Caución desea Cotizar?
+  1-Mantenimiento de Oferta
+  2-Ejecución de Contrato
+  3-Anticipo Financiero
+  4-Fondo de Reparo
+  5-Salir`;
   const siguienteCotizacion = "Desea Cotizar algún Otro Seguro "
   const valorOriginal = 0.00
   const valorFormateado = new Intl.NumberFormat("es-ES", {
@@ -21,15 +26,15 @@ const tasaAnual= 2.20;
   
 
   if (sumaAsegurada <= 333333333) {
-    mantenimiento = 2000+ "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA";
-    ejecución = 2000+ "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA";
-    anticipo = 2000+ "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA";
-    fondo = 2000+ "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA";
+    mantenimiento = 2000 + "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA\n  La Facturación es Trimestral";
+    ejecución = 2000 + "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA\n  La Facturación es Trimestral";
+    anticipo = 2000 + "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA\n  La Facturación es Trimestral";
+    fondo = 2000 + "\n  Este Importe es el Mínimo Vigente para el Cobro de su PRIMA\n  La Facturación es Trimestral";
   } else if (sumaAsegurada > 333333333.01) {
-    mantenimiento = Math.round(((sumaAsegurada*1/100)*(cotizacion))/100);
-    ejecución = Math.round(((sumaAsegurada*5/100)*(cotizacion))/100);
-    anticipo = Math.round(((sumaAsegurada*30/100)*(cotizacion))/100);
-    fondo = Math.round(((sumaAsegurada*5/100)*(cotizacion))/100);
+    mantenimiento = Math.round(((sumaAsegurada*1/100)*(cotizacion))/100) + "\n  La Facturación es Trimestral";
+    ejecución = Math.round(((sumaAsegurada*5/100)*(cotizacion))/100) + "\n  La Facturación es Trimestral";
+    anticipo = Math.round(((sumaAsegurada*30/100)*(cotizacion))/100) + "\n  La Facturación es Trimestral";
+    fondo = Math.round(((sumaAsegurada*5/100)*(cotizacion))/100) + "\n  La Facturación es Trimestral";
   }
  
 
